@@ -377,7 +377,11 @@ GIT:
 
 3) Send code to repository
 
-    git add anguar.json
+    git add .
+
+    git commit -m "first commit"
+
+    git push
 
 
 
