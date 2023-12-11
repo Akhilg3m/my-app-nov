@@ -1,0 +1,43 @@
+<label for="">name</label>
+<input type="text" [(ngModel)]="name">
+<br>
+
+<label for="">price</label>
+<input type="number"  [(ngModel)]="price">
+<br>
+
+<label for="">Free Delivery</label>
+<input type="text" [(ngModel)]="isFreeDelivery">
+<br>
+
+<button (click)="sumbit()">submit</button>
+
+<button (click)="below500()">price below 500</button>
+<button (click)="addCharges()">add 20 delivery chages</button>
+<button (click)="priceHighToLow()">price high to low</button>
+<button (click)="totalPrice()">total price</button>
+<input (keyup)="search()" [(ngModel)]="term" type="text" placeholder="search">
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>SNO</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Free Delivery</th>
+            <th>actions</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let product of products; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{ product.name | uppercase }}</td>
+            <td>{{ product.price }}</td>
+            <td [ngStyle]="{ 'color': product.isFreeDelivery==true?'green':'red' }">{{ product.isFreeDelivery }}</td>
+            <td>
+                <button (click)="delete(i)">delete</button>
+            </td>         
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,107 @@
+<h1>User form</h1>
+
+<form [formGroup]="userForm">
+
+    <label>Name:</label>
+    <input type="text" formControlName="name">
+    <div *ngIf="userForm.get('name')?.touched || userForm.get('name')?.dirty">
+        <p *ngIf="userForm.get('name')?.errors?.['required']">Name is required</p>
+        <p *ngIf="userForm.get('name')?.errors?.['minlength']">Min 3 chars reqruired</p>
+        <p *ngIf="userForm.get('name')?.errors?.['maxlength']">Max 10 chars allowed</p>
+    </div>
+    <br>
+
+    <label>Age:</label>
+    <input type="number" formControlName="age">
+    <div *ngIf="userForm.get('age')?.touched || userForm.get('age')?.dirty">
+        <p *ngIf="userForm.get('age')?.errors?.['required']">age is required</p>
+        <p *ngIf="userForm.get('age')?.errors?.['min']">Min 0 years</p>
+        <p *ngIf="userForm.get('age')?.errors?.['max']">Max 100 years</p>
+    </div>
+    <br>
+
+    <label>phone:</label>
+    <input type="number" formControlName="phone">
+    <div *ngIf="userForm.get('phone')?.touched || userForm.get('phone')?.dirty">
+        <p *ngIf="userForm.get('phone')?.errors?.['required']">phone is required</p>
+        <p *ngIf="userForm.get('phone')?.errors?.['min']">Atleast 10 digits required</p>
+        <p *ngIf="userForm.get('phone')?.errors?.['max']">Max 10 digits allowed</p>
+    </div>
+    <br>
+
+    <label>Email:</label>
+    <input type="email" formControlName="email">
+    <div *ngIf="userForm.get('email')?.touched || userForm.get('email')?.dirty">
+        <p *ngIf="userForm.get('email')?.errors?.['required']">email is required</p>
+        <p *ngIf="userForm.get('email')?.errors?.['email']">Invalid email format</p>
+    </div>
+    <br>
+
+    <div formGroupName="address">
+
+        <label>City:</label>
+        <input type="text" formControlName="city">
+        <br>
+    
+        <label>Pinode:</label>
+        <input type="number" formControlName="pincode">
+        <div *ngIf="userForm.get('address')?.get('pincode')?.touched || userForm.get('address')?.get('pincode')?.dirty">
+            <p *ngIf="userForm.get('address')?.get('pincode')?.errors?.['required']">Pincode is required</p>
+            <p *ngIf="userForm.get('address')?.get('pincode')?.errors?.['min']">Min 6 digits requried</p>
+            <p *ngIf="userForm.get('address')?.get('pincode')?.errors?.['max']">Max 6 digits allowed</p>
+        </div>
+        <br>
+
+    </div>
+
+    <button (click)="add()">Add Card</button>
+
+    <div formArrayName="cards">
+        <div *ngFor="let card of cardsFormArray.controls; let i=index ">
+            <div formGroupName="{{i}}">
+
+                <label>No:</label>
+                <input type="number" formControlName="no">
+                <br>
+
+                <label>Expiry:</label>
+                <input type="month" formControlName="expiry">
+                <br>
+
+                <label>CVV:</label>
+                <input type="number" formControlName="cvv">
+                <div *ngIf="cardsFormArray.controls[i]?.get('cvv')?.touched || cardsFormArray.controls[i]?.get('cvv')?.dirty">
+                    <p *ngIf="cardsFormArray.controls[i]?.get('cvv')?.errors?.['required']">CVV is reqired</p>
+                </div>
+                <br>
+
+                <button (click)="delete(i)">delete</button>
+                <hr>
+
+            </div>
+        </div>
+    </div>
+
+
+    <label>Studnet Type:</label>
+    <input type="radio" name="type" formControlName="type" value="dayScholor">
+    <label>Day Scholor</label>
+    <input type="radio" name="type" formControlName="type" value="residential">
+    <label>Residential</label>
+    <br>
+
+    <div *ngIf="userForm.get('type')?.value=='dayScholor'">
+        <label>Bus fee:</label>
+        <input type="number" formControlName="busFee">
+        <br>    
+    </div>
+
+    <div *ngIf="userForm.get('type')?.value=='residential'">
+        <label>Hostel Fee:</label>
+        <input type="number" formControlName="hostelFee">
+        <br>    
+    </div>
+
+    <button (click)="submit()">submit</button>
+
+</form>

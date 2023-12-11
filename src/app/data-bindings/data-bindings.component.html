@@ -1,0 +1,13 @@
+<p>data-bindings works!</p>
+
+<!-- TS to HTML -->
+<h1>My age is {{age}}</h1>
+
+<button [disabled]="isValid">Submit</button>
+
+<!-- HTML to TS -->
+<button (click)="cancel()">cancel</button>
+
+<!-- Two way -->
+<input type="number" [(ngModel)]="phone">
+<p>{{phone}}</p>

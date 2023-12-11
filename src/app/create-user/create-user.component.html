@@ -1,0 +1,23 @@
+<h1>Create User Form</h1>
+
+<form [formGroup]="userForm">
+
+    <label>Name</label>
+    <input type="text" formControlName="name">
+    <br>
+
+    <label>Phone</label>
+    <input type="text" formControlName="phone">
+    <br>
+
+    <label>City</label>
+    <input type="text" formControlName="city">
+    <br>
+
+    <label>Image</label>
+    <input type="text" formControlName="image">
+    <br>
+
+    <button (click)="submit()">submit</button>
+
+</form>
