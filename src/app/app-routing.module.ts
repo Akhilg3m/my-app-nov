@@ -16,6 +16,7 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { NotifyGuard } from './notify.guard';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -31,7 +32,8 @@ const routes: Routes = [
     {path:'create-user', canDeactivate:[NotifyGuard], component:CreateUserComponent},
     {path:'user-form', canDeactivate:[NotifyGuard], component: UserFormComponent},
     {path:'user-details/:id',component:UserDetailsComponent},
-    {path:'edit-user/:id', component:CreateUserComponent}
+    {path:'edit-user/:id', component:CreateUserComponent},
+    {path:'parent', component: ParentComponent}
   ]},
   {path:'',component:LoginComponent},
   {path:'**', component: PagenotfoundComponent}

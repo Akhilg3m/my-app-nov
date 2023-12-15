@@ -19,7 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { PricePipe } from './price.pipe';
-import { UserDetailsComponent } from './user-details/user-details.component'
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +39,9 @@ import { UserDetailsComponent } from './user-details/user-details.component'
     CreateUserComponent,
     UserFormComponent,
     PricePipe,
-    UserDetailsComponent
+    UserDetailsComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
