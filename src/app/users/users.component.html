@@ -39,14 +39,16 @@
     <tbody>
         <tr *ngFor="let user of users">
             <td>{{user.name}}</td>
-            <td>{{user.address?.pin}}</td>
+            <td>{{user.phone}}</td>
             <td>{{user.city}}</td>
             <td>{{user.fee | price}}</td>
             <td>
-                <img src="{{user.image}}" alt="">
+                <img width="100px" height="100px" src="{{user.image}}" alt="">
             </td>
             <td>{{user.id}}</td>
             <td>
+                <button (click)="edit(user.id)">edit</button>
+                <button (click)="view(user.id)">view</button>
                 <button (click)="delete(user.id)">delete</button>
             </td>
         </tr>

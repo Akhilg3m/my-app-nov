@@ -359,8 +359,8 @@ HTML:
     FormArray       usersFormArray.controls[i]?.get('cvv')
 
 
-GIT:
-----
+GIT Implementation:
+-------------------
 
 1) Linking sytem with website (Laptop->website)
 
@@ -379,15 +379,23 @@ GIT:
 
     git add .
 
-    git commit -m "first commit"
+    git commit -m "XXXXX"
 
     git push
 
 
 
+Communications:
+---------------
+
+    Three types of communications in angular
+
+        1. Component Communication
+        2. Page Communication
+        3. Module Communication
 
 
-
+    
 
 
 

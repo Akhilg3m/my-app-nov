@@ -18,7 +18,8 @@ import { ProductsComponent } from './products/products.component'
 import { HttpClientModule } from '@angular/common/http';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { UserFormComponent } from './user-form/user-form.component';
-import { PricePipe } from './price.pipe'
+import { PricePipe } from './price.pipe';
+import { UserDetailsComponent } from './user-details/user-details.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { PricePipe } from './price.pipe'
     ProductsComponent,
     CreateUserComponent,
     UserFormComponent,
-    PricePipe
+    PricePipe,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
