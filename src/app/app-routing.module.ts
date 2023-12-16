@@ -41,7 +41,11 @@ const routes: Routes = [
     {path:'items', component: ItemsComponent},
     {path:'nav', component: NavComponent},
     {path:'cart', component: CartComponent},
-    {path:'about-company', component: AboutCompanyComponent}
+    {path:'about-company', component: AboutCompanyComponent},
+    {
+      path: 'payments',
+      loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)
+    }
   ]},
   {path:'',component:LoginComponent},
   {path:'**', component: PagenotfoundComponent}
