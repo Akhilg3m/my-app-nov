@@ -25,6 +25,7 @@ import { ChildComponent } from './child/child.component';
 import { ItemsComponent } from './items/items.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component'
+import { AboutModule } from './about/about.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +55,8 @@ import { CartComponent } from './cart/cart.component'
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

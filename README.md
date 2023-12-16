@@ -415,7 +415,22 @@ Communications:
     bEvent.emit(20);
 
 
+Module Loadings:
+----------------
 
+    3 types
+        1) Eager loading
+        2) Lazy loading
+        3) Pre loading
+
+    1) Eager Loading:
+    -----------------
+        1) Export component from feature module
+        2) Import feature module in app module
+
+        Disadvantage:
+        -------------
+            Initial load time.
 
 
 

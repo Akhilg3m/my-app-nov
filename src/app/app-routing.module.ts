@@ -20,6 +20,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ItemsComponent } from './items/items.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
+import { AboutCompanyComponent } from './about/about-company/about-company.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -39,7 +40,8 @@ const routes: Routes = [
     {path:'parent', component: ParentComponent},
     {path:'items', component: ItemsComponent},
     {path:'nav', component: NavComponent},
-    {path:'cart', component: CartComponent}
+    {path:'cart', component: CartComponent},
+    {path:'about-company', component: AboutCompanyComponent}
   ]},
   {path:'',component:LoginComponent},
   {path:'**', component: PagenotfoundComponent}
