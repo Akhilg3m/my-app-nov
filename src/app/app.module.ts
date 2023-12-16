@@ -21,7 +21,10 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { PricePipe } from './price.pipe';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { ParentComponent } from './parent/parent.component';
-import { ChildComponent } from './child/child.component'
+import { ChildComponent } from './child/child.component';
+import { ItemsComponent } from './items/items.component';
+import { NavComponent } from './nav/nav.component';
+import { CartComponent } from './cart/cart.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +44,10 @@ import { ChildComponent } from './child/child.component'
     PricePipe,
     UserDetailsComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    ItemsComponent,
+    NavComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

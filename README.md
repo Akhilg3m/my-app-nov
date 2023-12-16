@@ -394,9 +394,25 @@ Communications:
         2. Page Communication
         3. Module Communication
 
+   
 
-    
+    Parent <-> child:
+    -----------------
 
+
+    parent.html
+    -----------
+
+    <app-child [ac]="10" (bEvent)="catch($event)" ></app-child>
+
+
+    child.ts
+    --------
+
+    @Input() public ac:string = "";
+
+    @Output() public bEvent:EventEmitter<any> = new EventEmitter();
+    bEvent.emit(20);
 
 
 
