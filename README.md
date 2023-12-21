@@ -397,7 +397,16 @@ Mistakes or Hurdles:
 
     3: Wrong code commit:
     ---------------------
-    
+
+        To go to back commit and deleting current commits
+
+            git reset COMMIT_HASH_CODE
+
+    4: Branch shifting:
+    -------------------
+
+
+
 
 
 
