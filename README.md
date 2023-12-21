@@ -381,7 +381,28 @@ GIT Implementation:
 
     git commit -m "XXXXX"
 
+    git pull origin master
+
     git push
+
+
+Mistakes or Hurdles:
+--------------------
+
+    1: Source: while creating the branch
+    ---------
+
+    2: Merge Conflicts:
+    -------------------
+
+    3: Wrong code commit:
+    ---------------------
+    
+
+
+
+
+
 
 
 
