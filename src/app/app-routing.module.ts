@@ -23,7 +23,6 @@ import { CartComponent } from './cart/cart.component';
 import { AboutCompanyComponent } from './about/about-company/about-company.component';
 
 const routes: Routes = [
-  {path:'login-two',component:LoginComponent},
   {path:'dashboard', canActivate:[AuthenticationGuard], component:DashboardComponent,children:[
     {path:'structureldirectives', component:StructuralDirectivesComponent},
     {path:'data-bindings', component:DataBindingsComponent},
